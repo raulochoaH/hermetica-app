@@ -10,7 +10,10 @@ module.exports = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'arrow-up': "url('/arrow-circle-up.svg')",
+        'right-arrow': "url('/right-arrow.svg')",
+        'btc-logo': "url('/btc_logo.svg')"
       },
     },
   },

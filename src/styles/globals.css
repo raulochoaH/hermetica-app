@@ -3,10 +3,54 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --stx-color: #5546ff;
+  --stx-color-rgb: #5546ff;
+  --btc-color: #f7931a;
+  --accent-color-1: #050c2b;
+  --accent-color-2: #e8eaef;
+  --background-color: #f9f9f9;
+  --star-color: #aea23b;
+  --red-color: #8a352c;
+  --green-color: #6f8711;
+  --blue-color: #487f9d;
+  --blue-light-color: #c7d8e1;
+  --grey-color: #e9e9eb;
+  --grey-background: #e6e6e9;
+  --white: #fff;
+  --detail-emphasis: #364480;
+  --text-blue: #170f49;
+  --text-grey: #606060;
+  --text-grey-light: #898989;
+  --hover-dark: #16183f;
+  --cycle-progress-bg: #676b79;
+  --cycle-progress: #c7d8e1;
+  --navbar-menu-wallet-grey: #707b8b;
+  --navbar-menu-grey: #e2e2e6;
+  --disconnect-btn-bg: #ba0202;
+  --dots-link-color: #565657;
+  --background-color-dark: #050c2b;
+  --accent-color-1-dark: #c7d8e1;
+  --accent-color-2-dark: #1f2539;
+  --background-btn-dark: #02071d;
+  --red-color-dark: #fb6060;
+  --green-color-dark: #cfee55;
+  --background-dw-box-dark: linear-gradient(117.92deg, #02071d -46.2%, #1f2539 87.31%);
+  --border-box-dark: #3b4158;
+  --background-vault-dark: rgba(61, 77, 142, .09);
+  --dropdown-info-bg-dark: #1f2539;
+  --arrow-dropdown-bg-dark: #3b3f4f;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -17,11 +61,257 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-color-dark);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+nav {
+  backdrop-filter: blur(15px);
+  z-index: 1;
+}
+
+main {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btc-color {
+  color: var(--btc-color)
+}
+
+.svg-icon {
+  fill: var(--btc-color)
+}
+
+
+.connect-button {
+  background-color: var(--background-btn-dark);
+  background-color: #02071d;
+  border-radius: 42px;
+  border: 0.1rem solid var(--white);
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 20px 73px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+
+.connect-button:hover {
+  background-color: var(--white);
+  color: var(--accent-color-1);
+  border-color: 0.1rem solid var(var(--accent-color-1))
+}
+
+
+.dw-box {
+  background: var(--background-dw-box-dark);
+  border: 1px solid var(--border-box-dark);
+  border-radius: 3.9rem;
+  width: 37rem;
+  height: 30rem
+}
+
+.recharts-tooltip-label, .recharts-tooltip-item-name, .recharts-tooltip-item-separator {
+  display: none;
+}
+.recharts-default-tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  font-size: 1.2rem;
+  background-color: var(--white);
+  color: white;
+  text-align: center;
+  letter-spacing: 1;
+  border-radius: 6px;
+  padding: 1rem 3rem;
+  filter: drop-shadow(0 26px 81px rgba(54,68,128,.15));
+  width: 10rem;
+    height: 2rem;
+}
+
+.recharts-tooltip-cursor {
+  display: none;
+}
+
+.recharts-tooltip-item span {
+  color: var(--accent-color-1);
+  font-size: 1rem;
+}
+
+
+#dw-amout {
+  outline: none
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.dw-box-second {
+  background-color: var(--background-vault-dark);
+  border: 1px solid var(--white);
+  border-radius: 3.9rem;
+  width: 37rem;
+  height: 30rem
+}
+
+.content-after:after {
+  content: 'BTC';
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+}
+
+
+.vault-details-btn {
+  background-color: var(--arrow-dropdown-bg-dark);
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 5px 16px rgba(8, 15, 52, .1);
+}
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.vault-total-deposits-bar-fill {
+  width: 4.59304%;
+  height: 0.9rem;
+  background-color: var(--btc-color);
+  border-radius: 0.5rem;
+  transition: width .5s ease-in-out;
+}
+
+.vault-details-btn.orange-bg {
+  background-color: var(--btc-color);
+}
+
+.dw-box-input-field {
+  background-color: var(--accent-color-1)
+}
+
+.vault-details-box {
+  background-color: var(--dropdown-info-bg-dark);
+  box-shadow: none;
+  border-radius: 1rem;
+  margin: 2.5rem auto;
+}
+
+
+.assets-chart-box {
+  background-color: var(--background-color-dark);
+  border: 1px solid var(--white);
+  border-radius: 3rem;
+}
+
+
+
+.about-strategy-risk-box {
+  background-color: var(--accent-color-1);
+}
+
+
+#vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr td {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+#vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c1 {
+  font-weight: 600;
+}
+
+#vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 {
+  width: 39%;
+  height: 1rem;
+  text-align: right
+}
+
+#vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 .breakeven-percentage {
+  color: var(--green-color);
+  font-weight: 600
+}
+
+body.dark #vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 .breakeven-percentage {
+  color: var(--green-color-dark)
+}
+
+#vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 .breakeven-red {
+  color: var(--red-color)
+}
+
+body.dark #vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 .breakeven-red {
+  color: var(--red-color-dark)
+}
+
+
+
+.analytics-row-premium-percentage {
+  color: #cfee55;
+}
+
+/* footer */
+
+.footer-section-info .footer-links .social-links .discord-logo-svg {
+  color: var(--white);
+}
+
+.cycle-chart-sections {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.8rem
+}
+
+.cycle-container {
+  background-color: var(--border-box-dark);
+  width: 74rem;
+  border-radius: 2.5rem;
+}
+
+.cycle-chart-progress {
+  background-color: var(--cycle-progress-bg);
+  border-radius: 1.4rem;
+}
+
+.cycle-chart-settlemente-progress {
+  width: 100%;
+  height: inherit;
+  border-radius: 1.4rem;
+  background-color: var(--cycle-progress);
+}
+
+.cycle-chart-intracycle-progress {
+  width: 20%;
+  height: inherit;
+  border-radius: 1.4rem;
+  background-color: var(--cycle-progress);
 }
