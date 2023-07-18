@@ -7,21 +7,21 @@ import btcLogo from '../../public/btc_logo.svg'
 const Deposit = () => {
 
     const [isDepositing, setIsDepositing] = useState(true);
-  
+
 
     return (
         <div className="flex flex-col w-full p-28 px-20 pb-0">
             <div className="dw-tabs">
-            <ul className="flex justify-start text-base list-none">
-  <li className={`flex  text-lg items-center my-4 mx-6  dw-tab-deposit before:block before:content before:bg-arrow-up before:bg-no-repeat before:w-10 before:h-10 ${isDepositing ? 'before:-rotate-180 font-semibold' : 'cursor-pointer before:rotate-0'} hover:cursor-pointer`}
-      onClick={() => setIsDepositing(true)}>
-    Deposit
-  </li>
-  <li className={`flex  text-lg items-center my-4 mx-6  dw-tab-deposit before:block before:content before:bg-arrow-up before:bg-no-repeat before:w-10 before:h-10 ${isDepositing ? 'cursor-pointer before:rotate-0 font-semibold' : 'before:-rotate-180 cursor-pointer'} hover:cursor-pointer `}
-      onClick={() => setIsDepositing(false)}>
-    Withdraw
-  </li>
-</ul>
+                <ul className="flex justify-start text-base list-none">
+                    <li className={`flex  text-lg items-center my-4 mx-6  dw-tab-deposit before:block before:content before:bg-arrow-up before:bg-no-repeat before:w-10 before:h-10 ${isDepositing ? 'before:-rotate-180 font-semibold' : 'cursor-pointer before:rotate-0'} hover:cursor-pointer`}
+                        onClick={() => setIsDepositing(true)}>
+                        Deposit
+                    </li>
+                    <li className={`flex  text-lg items-center my-4 mx-6  dw-tab-deposit before:block before:content before:bg-arrow-up before:bg-no-repeat before:w-10 before:h-10 ${isDepositing ? 'cursor-pointer before:rotate-0 ' : 'before:-rotate-180 cursor-pointer font-semibold'} hover:cursor-pointer `}
+                        onClick={() => setIsDepositing(false)}>
+                        Withdraw
+                    </li>
+                </ul>
             </div>
 
             <div className="flex justify-between items-center mb-16 px-10">
@@ -47,7 +47,7 @@ const Deposit = () => {
                             <button className='flex items-center justify-center m-auto p-10 h-16 w-24 text-base font-normal tracking-wider text-white bg-accent-color-1 border border-gray-400 rounded-lg cursor-pointer dw-box-input-field-button'>Max</button>
                         </div>
                         <div className=" flex items-center justify-center w-fit-content h-10 mt-4 pb-8  text-base font-medium text-white tracking-widest dw-box-pending-section ">
-                        {isDepositing ? 'deposit 0 BTC' : 'withdraw 0 BTC '}
+                            {isDepositing ? 'deposit 0 BTC' : 'withdraw 0 BTC '}
                             <span className='dw-info-icon'></span>
                         </div>
                     </div>
