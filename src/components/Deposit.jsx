@@ -41,12 +41,10 @@ const Deposit = () => {
                                 <input placeholder="Enter amount" id="dw-amout" min="1" type="number" name="amount" className='w-40 h-full p-6 bg-transparent text-white font-normal text-base input-field appearance-none border-none' />
                             </div>
 
-                            <button className='flex items-center justify-center m-auto p-10 h-16 w-24 text-base font-normal tracking-wider text-white bg-accent-color-1 border border-gray-400 rounded-lg cursor-pointer dw-box-input-field'>Max</button>
+                            <button className='flex items-center justify-center m-auto p-10 h-16 w-24 text-base font-normal tracking-wider text-white bg-accent-color-1 border border-gray-400 rounded-lg cursor-pointer dw-box-input-field-button'>Max</button>
                         </div>
                         <div className=" flex items-center justify-center w-fit-content h-10 mt-4 pb-8  text-base font-medium text-white tracking-widest dw-box-pending-section ">
-                        {isDepositing ? 'deposit ' : 'withdraw '}
-                            <p> 0 BTC</p>
-                            
+                        {isDepositing ? 'deposit 0 BTC' : 'withdraw 0 BTC '}
                             <span className='dw-info-icon'></span>
                         </div>
                     </div>

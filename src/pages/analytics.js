@@ -111,7 +111,7 @@ export default function Analytics() {
                   <h1 className='ml-2 tracking-wider text-3xl font-extrabold'>BTC Covered Call</h1>
                 </div>
                 <div className="asset-trend">
-                  <h2 className="my-1 mx-2 py-0.25 px-0.25 text-3xl font-semibold tracking-wide">30,138 USD</h2>
+                  <h2 className="my-1 mx-2 py-0.25 px-0.25 text-3xl font-semibold tracking-wide">29,944 USD USD</h2>
                   <span className="asset-trend-difference-percentaje"></span>
                 </div>
               </div>

@@ -205,8 +205,8 @@ input::-webkit-inner-spin-button {
 }
 
 .vault-total-deposits-bar-fill {
-  width: 4.59304%;
-  height: 0.9rem;
+  width:11%;
+  height: 0.76rem;
   background-color: var(--btc-color);
   border-radius: 0.5rem;
   transition: width .5s ease-in-out;
@@ -218,6 +218,10 @@ input::-webkit-inner-spin-button {
 
 .dw-box-input-field {
   background-color: var(--accent-color-1)
+}
+
+.dw-box-input-field-button:hover {
+  background-color: var(--hover-dark);
 }
 
 .vault-details-box {

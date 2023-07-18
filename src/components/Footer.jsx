@@ -9,7 +9,7 @@ import twitterIcon from '../../public/twitter.svg'
 const Footer = () => {
     return (
         <footer>
-            <section className='mt-1 mx-auto mb-32 w-65vw min-w-115 h-31rem pt-12 pb-10 px-12 text-white bg-accent-1 rounded-4.5rem p-16 cycle-container  '>
+            <section className='mt-10 mx-auto mb-32 w-65vw min-w-115 h-31rem pt-12 pb-10 px-12 text-white bg-accent-1 rounded-4.5rem p-16 cycle-container  '>
                 <div className="mb-8">
                     <h1 className='mb-2 text-3xl font-extrabold tracking-wider'>The Epoch</h1>
                     <p className='text-base font-normal'>
@@ -17,7 +17,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="flex flex-col w-full">
-                    <p className="flex justify-end items-center mb-12 text-sm  tracking-wider">
+                    <p className="flex justify-end items-center mb-12 text-sm">
                         <span className='font-semibold mr-1'> 1d 19h 54m 35s </span> before the epoch ends
                     </p>
                     <div className="flex justify-between mb-7 cycle-chart-sections">

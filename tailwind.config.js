@@ -13,7 +13,8 @@ module.exports = {
         'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'arrow-up': "url('/arrow-circle-up.svg')",
         'right-arrow': "url('/right-arrow.svg')",
-        'btc-logo': "url('/btc_logo.svg')"
+        'btc-logo': "url('/btc_logo.svg')",
+        'timer': "url('/timer.svg')",
       },
     },
   },
