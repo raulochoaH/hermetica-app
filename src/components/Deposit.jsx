@@ -12,13 +12,16 @@ const Deposit = () => {
     return (
         <div className="flex flex-col w-full p-28 px-20 pb-0">
             <div className="dw-tabs">
-                <ul className="flex justify-start text-base list-none">
-                    <li className={`flex  text-lg items-center my-4 mx-6  dw-tab-deposit before:block before:content before:bg-arrow-up before:bg-no-repeat before:w-10 before:h-10 before:-rotate-180 ${isDepositing ? 'dw-tab-deposit font-semibold' : 'cursor-pointer'} hover:cursor-pointer`}
-                    onClick={() => setIsDepositing(true)}>
-                        Deposit</li>
-                        <li className={`flex  text-lg items-center my-4 mx-6  dw-tab-deposit before:block before:content before:bg-arrow-up before:bg-no-repeat before:w-10 before:h-10 before:-rotate-180 ${isDepositing ? 'dw-tab-deposit ' : 'cursor-pointer font-semibold'} hover:cursor-pointer `}
-                    onClick={() => setIsDepositing(false)}>Withdraw</li>
-                </ul>
+            <ul className="flex justify-start text-base list-none">
+  <li className={`flex  text-lg items-center my-4 mx-6  dw-tab-deposit before:block before:content before:bg-arrow-up before:bg-no-repeat before:w-10 before:h-10 ${isDepositing ? 'before:-rotate-180 font-semibold' : 'cursor-pointer before:rotate-0'} hover:cursor-pointer`}
+      onClick={() => setIsDepositing(true)}>
+    Deposit
+  </li>
+  <li className={`flex  text-lg items-center my-4 mx-6  dw-tab-deposit before:block before:content before:bg-arrow-up before:bg-no-repeat before:w-10 before:h-10 ${isDepositing ? 'cursor-pointer before:rotate-0 font-semibold' : 'before:-rotate-180 cursor-pointer'} hover:cursor-pointer `}
+      onClick={() => setIsDepositing(false)}>
+    Withdraw
+  </li>
+</ul>
             </div>
 
             <div className="flex justify-between items-center mb-16 px-10">
