@@ -53,7 +53,7 @@ const Footer = () => {
                             />
                         </Link>
                         <Link
-                            href='https://discord.com/invite/s2NkRqauqZ'
+                            href='https://twitter.com/HermeticaFi'
                             target='_blank'>
                             <Image
                                 priority
