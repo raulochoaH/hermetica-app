@@ -1,21 +1,19 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Deposit from '../components/Deposit'
-import VaultDetails from '../components/VaultDetails'
-import About from '../components/About'
+import Deposit from '../components/vaultSection/Deposit'
+import VaultDetails from '../components/vaultSection/VaultDetails'
+import About from '../components/vaultSection/About'
 
 
 
 export default function Home() {
   return (
-    <main className="h-57rem flex flex-col  justify-center items-center">
+    <main className="flex flex-col  justify-center items-center">
       <div className="w-full h-full vault-body">
         <Deposit />
       </div>
       <div className='w-full px-0'>
-          <VaultDetails />
-          <About />
-        </div>
+        <VaultDetails />
+        <About />
+      </div>
     </main>
   )
 }

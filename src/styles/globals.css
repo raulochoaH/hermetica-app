@@ -128,33 +128,12 @@ main {
   height: 30rem
 }
 
-.recharts-tooltip-label, .recharts-tooltip-item-name, .recharts-tooltip-item-separator {
-  display: none;
-}
-.recharts-default-tooltip {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: max-content;
-  font-size: 1.2rem;
-  background-color: var(--white);
-  color: white;
-  text-align: center;
-  letter-spacing: 1;
-  border-radius: 6px;
-  padding: 1rem 3rem;
-  filter: drop-shadow(0 26px 81px rgba(54,68,128,.15));
-  width: 10rem;
-    height: 2rem;
-}
-
-.recharts-tooltip-cursor {
-  display: none;
-}
-
-.recharts-tooltip-item span {
-  color: var(--accent-color-1);
-  font-size: 1rem;
+.dw-box-second {
+  background-color: var(--background-vault-dark);
+  border: 1px solid var(--white);
+  border-radius: 3.9rem;
+  width: 37rem;
+  height: 30rem
 }
 
 
@@ -169,13 +148,6 @@ input::-webkit-inner-spin-button {
 }
 
 
-.dw-box-second {
-  background-color: var(--background-vault-dark);
-  border: 1px solid var(--white);
-  border-radius: 3.9rem;
-  width: 37rem;
-  height: 30rem
-}
 
 .content-after:after {
   content: 'BTC';
@@ -187,7 +159,7 @@ input::-webkit-inner-spin-button {
 
 .vault-details-btn {
   background-color: var(--arrow-dropdown-bg-dark);
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 3rem;
@@ -195,6 +167,40 @@ input::-webkit-inner-spin-button {
   border-radius: 50%;
   box-shadow: 0 5px 16px rgba(8, 15, 52, .1);
 }
+
+/*Price Btc */
+
+.recharts-tooltip-label, .recharts-tooltip-item-name, .recharts-tooltip-item-separator {
+  display: none;
+}
+
+.recharts-default-tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  font-size: 1.2rem;
+  background-color: var(--white);
+  color: white;
+  text-align: center;
+  letter-spacing: 1;
+  border-radius: 6px;
+  padding: 1rem 3rem;
+  filter: drop-shadow(0 26px 81px rgba(54,68,128,.15));
+  width: 10rem;
+  height: 2rem;
+}
+
+.recharts-tooltip-cursor {
+  display: none;
+}
+
+.recharts-tooltip-item span {
+  color: var(--accent-color-1);
+  font-size: 1rem;
+}
+
+
 @keyframes slide-down {
   0% {
     opacity: 0;
@@ -252,11 +258,11 @@ input::-webkit-inner-spin-button {
 }
 
 
-
 .about-strategy-risk-box {
   background-color: var(--accent-color-1);
 }
 
+/** Table **/
 
 #vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr td {
   font-size: 1.6rem;
@@ -273,28 +279,12 @@ input::-webkit-inner-spin-button {
   text-align: right
 }
 
-#vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 .breakeven-percentage {
-  color: var(--green-color);
-  font-weight: 600
-}
-
-body.dark #vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 .breakeven-percentage {
-  color: var(--green-color-dark)
-}
-
-#vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 .breakeven-red {
-  color: var(--red-color)
-}
-
-body.dark #vault-details-box .vault-details-content .vault-details-info .vault-details-info-table table tr .vdit-c2 .breakeven-red {
-  color: var(--red-color-dark)
-}
-
 
 
 .analytics-row-premium-percentage {
   color: #cfee55;
 }
+
 
 /* footer */
 
@@ -310,7 +300,7 @@ body.dark #vault-details-box .vault-details-content .vault-details-info .vault-d
 
 .cycle-container {
   background-color: var(--border-box-dark);
-  width: 74rem;
+  width: 71rem;
   border-radius: 2.5rem;
 }
 

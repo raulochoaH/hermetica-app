@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import discordIcon from '../../public/discord.svg'
-import twitterIcon from '../../public/twitter.svg'
+import discordIcon from '../../../public/discord.svg'
+import twitterIcon from '../../../public/twitter.svg'
 
 
 
@@ -67,14 +67,16 @@ const Footer = () => {
                         <Link
                             href='https://docs.hermetica.fi/'
                             target='_blank'
+                            className='underline'
                         >
-                            <p className='underline'>How it works</p>
+                            How it works
                         </Link>
                         <Link
                             href='#'
                             target='_blank'
+                            className='underline'
                         >
-                            <p className='underline'>Terms of Use</p>
+                            Terms of Use
                         </Link>
                     </div>
                     <div className="theme-toogle"></div>

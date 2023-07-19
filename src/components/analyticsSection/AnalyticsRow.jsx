@@ -1,12 +1,14 @@
 import React from 'react';
 import Image from 'next/image'
 
-import btcLogo from '../../public/btc_logo.svg'
+import btcLogo from '../../../public/btcLogo.svg'
 
 
 
 const AnalyticsRow = ({ rowData, className }) => {
     return (
+
+        
         <div className="flex justify-evenly w-full h-20 border-b border-gray-300" id="analytics-table">
 
             <div className="flex justify-evenly  items-center w-80  text-lg font-semibold analytics-row-product analytics-row-slot">

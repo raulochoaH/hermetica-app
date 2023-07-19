@@ -1,16 +1,16 @@
 import React from 'react'
 import { useState } from 'react';
 import Image from 'next/image';
-import PriceBtc from '../components/PriceBtc'
-import Table from '../components/Table'
+
+import Table from '../commom/Table'
 import dynamic from 'next/dynamic';
-import btcLogo from '../../public/btc_logo.svg'
-import arrow_btn from '../../public/arrow_btn.svg'
+import btcLogo from '../../../public/btcLogo.svg'
+import arrowBtn from '../../../public/arrowBtn.svg'
 
 
 
 const DynamicPriceBtc = dynamic(
-    () => import('../components/PriceBtc'),
+    () => import('../commom/PriceBtc'),
     { ssr: false }
 );
 
@@ -61,25 +61,16 @@ const VaultDetails = () => {
     ];
 
     return (
-        <div className={`h-3/5 w-10/12 px-20  flex mx-16 flex-col pt-0 border-none rounded-2xl vault-details-box ${addClass ? 'pb-20' : 'pb-0'}`}
+        <div className={`h-3/5 w-10/12 px-20 ml-28 flex mx-16 flex-col pt-0 border-none rounded-2xl vault-details-box ${addClass ? 'pb-20' : 'pb-0'}`}
         >
             <div className="flex justify-between  items-center text-left mt-8 w-full text-2xl font-medium cursor-pointer  vault-details-action"
                 onClick={toggleDetails}
             >
                 <p>Vault Details</p>
-                <span
-                    className={`vault-details-btn ${showDetails ? "orange-bg" : ""
-                        }`}
-                >
-                    <Image
-                        src={arrow_btn}
-                        width="37"
-                        height="36"
-                        style={{ transform: showDetails ? 'rotate(0deg)' : 'rotate(180deg)' }}
-                    />
-                </span>
+                <div className={`vault-details-btn ${showDetails ? 'orange-bg' : ''}`}>
+                    <Image src={arrowBtn} width={37} height={36} style={{ transform: showDetails ? 'rotate(0deg)' : 'rotate(180deg)' }} />
+                </div>
             </div>
-
             <div className={`vault-details-content mt-8 ${showDetails ? 'open' : ''
                 }`}
                 style={{
@@ -94,24 +85,20 @@ const VaultDetails = () => {
                         transition: 'max-height 0.3s ease, opacity 0.3s ease',
                     }}>
                     <div className="flex flex-col justify-around w-49 h-40rem bg-grey-background rounded-3.9rem p-4 assets-chart-box">
-
                         <div className="p-4 pb-6 asset-chart-box-header">
                             <div className="asset-chart-info">
                                 <div className="flex asset-chart-info-title">
-                                    <Image
-                                        src={btcLogo}
-                                        width="37"
-                                        height="36"
-                                    />
-                                    <h1 className='ml-2 tracking-wider text-3xl font-extrabold'>BTC Covered Call</h1>
+                                    <Image src={btcLogo} width={37} height={36} alt="BTC Logo" />
+                                    <h1 className="ml-2 tracking-wider text-3xl font-extrabold">BTC Covered Call</h1>
                                 </div>
                                 <div className="asset-trend">
                                     <h2 className="my-1 mx-2 py-0.25 px-0.25 text-3xl font-semibold tracking-wide">29,944 USD</h2>
-                                    <span className="asset-trend-difference-percentaje"></span>
+                                    <span className="asset-trend-difference-percentage"></span>
                                 </div>
                             </div>
                             <button className="drop-time-asset"></button>
                         </div>
+
 
                         <div className="asset-chart">
                             <DynamicPriceBtc />
